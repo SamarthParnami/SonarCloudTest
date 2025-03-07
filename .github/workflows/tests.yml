@@ -1,4 +1,4 @@
-name: Build
+name: Unit Test
 on:
   push:
     branches:
@@ -6,14 +6,24 @@ on:
   pull_request:
     types: [opened, synchronize, reopened]
 jobs:
-  sonarqube:
-    name: SonarQube
+  unittest:
+    name: Run Unit Test
     runs-on: ubuntu-latest
     environment: production
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+            python-version: '3.13' 
+      - name: Install Test Requirements
+        run: pip install -r test-requirements.pip
+      - name: Run tests
+        run: coverage run unittest
+      - name: Prepare Coverage report
+        run: coverage xml --omit .coverage-reports/
       - name: SonarQube Scan
         uses: SonarSource/sonarqube-scan-action@v5
         env:
