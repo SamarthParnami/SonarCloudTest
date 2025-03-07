@@ -21,7 +21,7 @@ jobs:
       - name: Install Test Requirements
         run: pip install -r test-requirements.pip
       - name: Run tests
-        run: coverage run unittest
+        run: coverage run python -m unittest
       - name: Prepare Coverage report
         run: coverage xml --omit .coverage-reports/
       - name: SonarQube Scan
