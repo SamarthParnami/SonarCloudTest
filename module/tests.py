@@ -14,3 +14,10 @@ class FunctionDTest(TestCase):
     def test1(self):
         from .source import functionD
         functionD()
+
+
+class FunctionETest(TestCase):
+
+    def test1(self):
+        from .source import functionE
+        functionE()

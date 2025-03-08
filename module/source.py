@@ -10,3 +10,6 @@ def functionC():
 
 def functionD():
     print("inside function D")
+
+def functionE():
+    print("inside function E")
