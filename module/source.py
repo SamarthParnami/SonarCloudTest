@@ -13,3 +13,18 @@ def functionD():
 
 def functionE():
     print("inside function E")
+
+def functionF():
+    print("inside function F")
+
+def functionG():
+    print("inside function F")
+
+def functionH():
+    print("inside function F")
+
+def functionI():
+    print("inside function F")
+
+def functionJ():
+    print("inside function F")
