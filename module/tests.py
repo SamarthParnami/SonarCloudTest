@@ -26,5 +26,5 @@ class FunctionETest(TestCase):
 class FunctionLTest(TestCase):
 
     def test1(self):
-        from .source import functionL
-        functionL()
+        from .source import function_l
+        function_l()
