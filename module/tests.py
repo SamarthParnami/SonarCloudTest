@@ -23,8 +23,8 @@ class FunctionETest(TestCase):
         functionE()
 
 
-class FunctionKTest(TestCase):
+class FunctionLTest(TestCase):
 
     def test1(self):
-        from .source import functionK
-        functionK()
+        from .source import function_l
+        function_l()
