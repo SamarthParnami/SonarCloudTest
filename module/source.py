@@ -3,3 +3,6 @@ def functionA():
 
 def functionB():
     print("inside function B")
+
+def functionC():
+    print("inside function C")
